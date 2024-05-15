@@ -21,7 +21,7 @@ CrudRouter.post("/blog-update",async (req,res)=>{
 })
 CrudRouter.get("/blog-delete/:id",async (req,res)=>{
     const id = req.params.id;
-    const data = await deleteBlogData();
+    const data = await deleteBlogData(id);
     res.send({data:data,message: "SUCCESS"});
 })
 
